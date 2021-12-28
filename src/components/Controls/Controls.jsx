@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { checkSVG, randomSVG, refreshSVG, saveSVG } from "../../assets/svgs";
 import { colorSecondary, colorTertiary } from "../../styles/globalVariables";
 import { storage } from "../../utils/handleLocalStorage";
-import { shuffle } from "../../utils/shuffle";
+import { sequenceToStringHelper } from "../../utils/sequenceToString";
 import { validateInput } from "../../utils/validateInput";
 import ErrorToast from "../ErrorToast/ErrorToast";
 import { Button, ControlsStyles, TextBox } from "./ControlsStyles";
@@ -15,15 +15,18 @@ const Controls = ({ setSequence, sequence }) => {
   const handleChangeSequence = () => {
     if (validateInput(textBox)) {
       setIsError(false);
+
       setSequence(textBox);
     } else setIsError(true);
   };
 
   const handleSaveSequence = () => {
     if (validateInput(sequence)) {
-      setIsError(false);
       storage.save(sequence);
+
+      setIsError(false);
       setHasSaved(true);
+
       setTimeout(() => {
         setHasSaved(false);
       }, 3000);
@@ -34,13 +37,8 @@ const Controls = ({ setSequence, sequence }) => {
     if (validateInput(textBox)) {
       setIsError(false);
 
-      const shuffledSequence = shuffle(textBox.split(", "));
-      const sequenceToString = shuffledSequence.reduce((newSequence, item, i) => {
-        const itemToAdd = item.toString();
-        newSequence += itemToAdd;
-        if (i !== 8) return newSequence.concat(", ");
-        return newSequence;
-      }, "");
+      const sequenceToString = sequenceToStringHelper(textBox);
+
       setTextBox(sequenceToString);
     } else setIsError(true);
   };
