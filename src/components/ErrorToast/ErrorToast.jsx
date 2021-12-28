@@ -11,7 +11,7 @@ const ErrorToast = ({ isActive, setIsError }) => {
     }
   }, [isActive, setIsError]);
   return (
-    <ErrorToastStyles isActive={isActive}>
+    <ErrorToastStyles aria-hidden={!isActive} data-testid="error" isActive={isActive}>
       {errorSVG}
       <p>Input must have a comma and space after each item: 0, 1, 2, 3, 4, 5, 6, 7, 8</p>
     </ErrorToastStyles>

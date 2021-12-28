@@ -20,4 +20,5 @@
 
 ```
   npm start
+  npm test
 ```

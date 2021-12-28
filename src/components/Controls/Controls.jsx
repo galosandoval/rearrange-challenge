@@ -45,12 +45,14 @@ const Controls = ({ setSequence, sequence }) => {
 
   return (
     <ControlsStyles>
-      <Button onClick={handleShuffle}>{randomSVG}</Button>
+      <Button aria-label="random" onClick={handleShuffle}>
+        {randomSVG}
+      </Button>
       <TextBox value={textBox} onChange={(event) => setTextBox(event.target.value)} />
-      <Button onClick={handleChangeSequence} bg={colorSecondary}>
+      <Button aria-label="shuffle" onClick={handleChangeSequence} bg={colorSecondary}>
         {refreshSVG}
       </Button>
-      <Button onClick={handleSaveSequence} bg={colorTertiary}>
+      <Button aria-label="save" onClick={handleSaveSequence} bg={colorTertiary}>
         {hasSaved ? checkSVG : saveSVG}
       </Button>
       <ErrorToast isActive={isError} setIsError={setIsError} />

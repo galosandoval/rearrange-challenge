@@ -3,7 +3,8 @@ import { colorSecondary } from "../../styles/globalVariables";
 
 export const ErrorToastStyles = styled.div`
   position: absolute;
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  visibility: ${(p) => (p.isActive ? "visible" : "hidden")};
   opacity: ${(p) => (p.isActive ? 1 : 0)};
   transform: ${(p) => (p.isActive ? "translateX(0%)" : "translateX(20%)")};
   background-color: ${colorSecondary};
