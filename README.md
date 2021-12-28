@@ -10,6 +10,8 @@
 
 - Some state management: https://github.com/galosandoval/rearrange-challenge/blob/main/src/components/Controls/Controls.jsx#L11
 
+- Unit tests: https://github.com/galosandoval/rearrange-challenge/blob/main/src/components/Controls/Control.test.js
+
 ## How I worked on this project
 
 - I planned out the layout using figma: ![](public/figma-rearrange.png)
