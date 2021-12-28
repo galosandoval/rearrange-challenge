@@ -5,6 +5,7 @@ import styled from "styled-components/macro";
 import { GlobalStyle } from "../styles/globalStyles";
 import Controls from "./Controls/Controls";
 import { storage } from "../utils/handleLocalStorage";
+import { colorBackground } from "../styles/globalVariables";
 
 const StyledApp = styled.main`
   display: flex;
@@ -12,6 +13,7 @@ const StyledApp = styled.main`
   align-items: center;
   overflow: hidden;
   position: relative;
+  color: ${colorBackground};
 `;
 
 function App() {
