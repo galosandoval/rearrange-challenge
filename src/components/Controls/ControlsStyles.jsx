@@ -2,7 +2,6 @@ import styled from "styled-components/macro";
 import { colorBackground, colorPrimary, colorSecondary } from "../../styles/globalVariables";
 
 export const ControlsStyles = styled.section`
-  flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   align-items: center;

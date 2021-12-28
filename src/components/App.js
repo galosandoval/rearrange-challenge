@@ -9,6 +9,8 @@ import { colorBackground } from "../styles/globalVariables";
 
 const StyledApp = styled.main`
   display: flex;
+  justify-content: center;
+  gap: 4rem;
   height: 100vh;
   align-items: center;
   overflow: hidden;
