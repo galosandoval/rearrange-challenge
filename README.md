@@ -1,5 +1,7 @@
 ### Here's the deployed site: https://rearrange-challenge.vercel.app/
 
+### Here's a short video of the app: https://drive.google.com/file/d/1ZoBBpCX2Qbwn4G2MdazGxQw8rNV-XabN/view?usp=sharing
+
 ## How I solved the problem
 
 - Here is where I parse the input string: https://github.com/galosandoval/rearrange-challenge/blob/main/src/utils/sequenceToString.js
